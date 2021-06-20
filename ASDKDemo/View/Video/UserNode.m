@@ -33,7 +33,7 @@
     [self addSubnode:_userImageNode];
     
     __weak __typeof(self)weakSelf = self;
-    _userImageNode.imageModificationBlock = ^UIImage *(UIImage *originalImg){
+    _userImageNode.imageModificationBlock = ^UIImage * _Nullable(UIImage * _Nonnull originalImg, ASPrimitiveTraitCollection traitCollection) {
         CGSize size = CGSizeMake(weakSelf.userImageNode.calculatedSize.width * [UIScreen mainScreen].scale, weakSelf.userImageNode.calculatedSize.height * [UIScreen mainScreen].scale);
         UIGraphicsBeginImageContext(size);
         UIBezierPath *path = [UIBezierPath
@@ -47,6 +47,7 @@
         return refinedImg;
         
     };
+ 
     
     _nameTextNode = [ASTextNode createWithAttr:[NSAttributedString createWithText:model.username Font:[UIFont systemFontOfSize:14] Color:[UIColor grayColor]]];
     [self addSubnode:_nameTextNode];

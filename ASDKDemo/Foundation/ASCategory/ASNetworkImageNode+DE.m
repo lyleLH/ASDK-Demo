@@ -33,7 +33,7 @@
 
 - (asimagenode_modification_block_t )imageModBlockWithCorner:(CGFloat )corner MaskImage:(UIImage *)maskImage{
     __weak __typeof(self)weakSelf = self;
-    return ^UIImage *(UIImage *originalImg){
+    return ^UIImage *(UIImage *originalImg,ASPrimitiveTraitCollection traitCollection){
         CGSize size = CGSizeMake(weakSelf.calculatedSize.width * [UIScreen mainScreen].scale, weakSelf.calculatedSize.height * [UIScreen mainScreen].scale);
         UIGraphicsBeginImageContext(size);
         UIBezierPath *path = [UIBezierPath
