@@ -1,11 +1,4 @@
 # ASDK-Demo
 
-Texture(ASDK) Demo
-
-## 相关文章
-
-iOS 开发一定要尝试的 Texture(ASDK)
-
--> **[CocoaChina](http://blog.cocoachina.com/article/64746)**
-
--> **[Blog 推荐](https://didee.cn/2018/01/29/iOS-ASDK/)** 
+原Demo编译不通过。
+更新了Texture版本和block类型，使得demo可以重新编译通过
